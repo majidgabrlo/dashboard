@@ -1,13 +1,43 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: iryekan;
+  src: url("assets/fonts/yekan-regular.woff2") format("woff2");
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: "iryekan", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif !important;
+}
+
+.sidebar-nav .ant-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-right: 2rem !important;
+  height: 3.2rem !important;
+  font-size: 1.2rem;
+  border-radius: 14px 0px 0px 14px;
+  margin-left: 1rem;
+}
+
+.sidebar-nav .ant-menu-item svg {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.sidebar-nav .ant-menu-item-selected {
+  background-color: #5e6be3 !important;
+  color: white !important;
+}
+
+.sidebar-nav .ant-menu-item-selected a {
+  color: white;
+}
+
+.ant-menu-item-selected a:hover {
+  color: white !important;
 }
